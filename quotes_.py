@@ -17,6 +17,8 @@ genre = rn.choice([
     "wisdom"
 ])
 
+print(f"_tag_ {genre}")
+
 url=f"https://www.goodreads.com/quotes/tag/{genre}?page={rn.randint(9)}"
 response = requests.get(url)
 response.raise_for_status()
@@ -34,7 +36,6 @@ quotes = [[div.text.strip().split('\n',2)[0], div.text.strip().split('\n',2)[2]]
 
 idx = rn.randint(len(quotes))
 
-print(f"_tag_ {genre}")
 
 print(quotes[idx][0])
 print(''.join(quotes[idx][1].split("\n")))
