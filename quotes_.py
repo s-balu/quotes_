@@ -14,7 +14,9 @@ genre = rn.choice([
     "life",
     "hope",
     "happiness",
-    "wisdom"
+    "wisdom",
+    "stoicism",
+    "stoic"
 ])
 
 print(f"_tag_ {genre}")
